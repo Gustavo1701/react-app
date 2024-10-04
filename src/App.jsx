@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { Coleguinhas } from './assets/components/coleguinha';
 
 function App() {
   const [nome, setNome] = useState('');
@@ -28,13 +29,7 @@ function App() {
     <>
 
       <h1>Lista de alunos</h1>
-      {alunos.map(alunos => (
-      <>
-        <h3>${alunos.nome}</h3>
-        <p>${alunos.nomeCompleto}</p>
-      </>
-      
-      ))}
+      {alunos.map(alunos => <Coleguinhas nome={alunos.nome} nomeCompleto={alunos.nomeCompleto} />)}
 
     </>
   )
